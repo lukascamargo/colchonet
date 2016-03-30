@@ -410,3 +410,671 @@ ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.8ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 22:43:25 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hhG3nzi/S+XoNcMVm7BocKxm7J0ze4kul61XaWuUalOih38sdiMTVZfzVWz0VOrSqvYrOLi1CcAfwaLdC39B6w==", "user"=>{"full_name"=>"Lukas Camargo", "email"=>"lukas.fialho@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"lukas lukas lukas lukas lukas lukas lukas\r\n"}, "commit"=>"Create User"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (11.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'lukas.fialho@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 242ms (Views: 29.5ms | ActiveRecord: 14.5ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 22:44:20 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VERCUbEos2JHohd1bTN+kswJbfc4A2hGLN6KgiOG/U1w0ori/7Tr0jhkgQwC1/wwypmqUrPN6Kiksn82Q23W9Q==", "user"=>{"full_name"=>"Lukas Camargo", "email"=>"exemplo@exemplo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"lukas lukas lukas lukas lukas lukas lukas\r\n"}, "commit"=>"Create User"}
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'exemplo@exemplo.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 22:44:46 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KBSfHA+wIIC0rXjiZT9EREVnfa0RLu9ooa/VgdwEeVcMglevQSx4MMtr7psK28bmQ/e6CJrgb4YpwyA1vO9S7w==", "user"=>{"full_name"=>"Lukas", "email"=>"exemplo@exemploo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas\r\n"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'exemplo@exemploo.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+
+
+Started POST "/users" for ::1 at 2016-03-29 22:52:03 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0pH7TQb9XxnnMYBekgroLFhgx08N57aTQ7WJX821TMj2BzP+SGEHqZj3Fif97mqOXvAA6oYpNn3L2XzrrV5ncA==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas\r\n"}, "commit"=>"Create User"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'allan.camargo@gmail.com' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 35ms (Views: 12.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 22:52:29 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0pH7TQb9XxnnMYBekgroLFhgx08N57aTQ7WJX821TMj2BzP+SGEHqZj3Fif97mqOXvAA6oYpNn3L2XzrrV5ncA==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas lukas\r\n"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:7:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (201.8ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (86.6ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (211.6ms)
+
+
+Started GET "/users/new" for ::1 at 2016-03-29 22:52:44 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 22:52:59 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mB6te7Ncj9Mf5j9QCtiM2vC/PYBXDZky1hUZ86cSDrO8iGXI/cDXY2AgqSllPA549i/6JdzDGdxeeexHx/klCw==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"lukas asodiasodinasopdkasopdkaopskdopaskdopaskdpkspdkaspdkasopkdopaskdopaskdopak\r\n"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:7:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.8ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.6ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (102.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-03-29 22:54:46 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+
+
+Started POST "/users" for ::1 at 2016-03-29 22:55:16 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mX9rDNlMOS9hbHkskvqYg3Q/diusDq0fYmLppsozASO96aO/l9Bhnx6q71X9Hhohcq+xjifALfHqDhwSqtgqmw==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"estou tentando fazer uma aplicação rails. Deu ruim. "}, "commit"=>"Create User"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'allan.camargo@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 18ms (Views: 9.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 22:57:10 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qBJBZHOt1wgYy6xd1d82MT1oAoThtsJvPFK4rFAmh0yMhInXPTGPuGcNOiS6O7STO/jFIWp4QoG0Pk0YMM2s9A==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"estou tentando fazer uma aplicação rails. Deu ruim. "}, "commit"=>"Create User"}
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'allan.camargo@gmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 33ms (Views: 13.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:07:07 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OFJhEf3t0M9syS4VsvLlJy5VRAtZQAsxgQ+y79M1A9AcxKmis3GIfxMPuGzdFmeFKMWDrtKOi98JY0dbs94oaA==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"estou tentando fazer uma aplicação rails. Deu ruim. "}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:7:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.6ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (106.7ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+
+
+Started GET "/users/new" for ::1 at 2016-03-29 23:10:25 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 12.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:10:44 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fzglT/bqoigZ1FvE0UTD0jxaFF74Etsop+xef3WFGOZbru38uHb6mGYSzb2+oEFwOsrT+3PcW8YvgKvLFW4zXg==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"Eu estou tentando criar um formulario de cadastro em Rails. Ta dando ruim."}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'allan.camargo@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 17ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:11:11 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0vJTMag05kSgta6Q5Nr/21pTGqfaocGvNvXxusMCRh32ZJuC5qi+9N9zOOmLPn15XMPdAlFvQUG+mQQOo+ltpQ==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"Eu estou tentando criar um formulario de cadastro em Rails. Ta dando ruim."}, "commit"=>"Create User"}
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'allan.camargo@gmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 34ms (Views: 12.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:11:31 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cZYMScG12XXPQC+v7t5YaS/kHxCkri6sUZ/xtUesDbNVAMT6jymBxbCGudaBOtrLKXTYtS9grkLZ8wQBJ0cmCw==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"Eu estou tentando criar um formulario de cadastro em Rails. Ta dando ruim."}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'allan.camargo@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"users", :id=>nil} missing required keys: [:id]):
+     7: 	<li>Bio: <%= @user.bio %></li>
+     8: </ul>
+     9: 
+    10: <%= link_to 'Editar Perfil', edit_user_path(@user) %>
+  app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb___179998343_56542260'
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.6ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.8ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (105.5ms)
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'allan.camargo@gmail.com' LIMIT 1
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:15:16 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0vJTMag05kSgta6Q5Nr/21pTGqfaocGvNvXxusMCRh32ZJuC5qi+9N9zOOmLPn15XMPdAlFvQUG+mQQOo+ltpQ==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"Eu estou tentando criar um formulario de cadastro em Rails. Ta dando ruim."}, "commit"=>"Create User"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'allan.camargo@gmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 36ms (Views: 14.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:15:48 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxYFGUk3IkVL91g/X7ci/Oxxv4XA9gqs1VyDKvkbBqrvgM2qB6t69TQxzkYwU6Be6uF4IEs4ikJdMHaemfAtEg==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "location"=>"São Paulo, BR", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"Eu estou tentando criar um formulario de cadastro em Rails. Ta dando ruim."}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'allan.camargo@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (47.9ms)[0m  INSERT INTO "users" ("email", "full_name", "location", "password", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["email", "allan.camargo@gmail.com"], ["full_name", "Allan"], ["location", "São Paulo, BR"], ["password", "segredo"], ["bio", "Eu estou tentando criar um formulario de cadastro em Rails. Ta dando ruim."], ["created_at", "2016-03-30 02:15:48.924916"], ["updated_at", "2016-03-30 02:15:48.924916"]]
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 66ms (ActiveRecord: 56.0ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-29 23:15:49 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 155ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3/edit" for ::1 at 2016-03-29 23:21:38 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 28ms (Views: 14.1ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/users/3" for ::1 at 2016-03-29 23:31:37 -0300
+
+AbstractController::ActionNotFound (The action 'update' could not be found for UsersController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (106.2ms)
+
+
+Started PATCH "/users/3" for ::1 at 2016-03-29 23:37:23 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xRun9aGLZ/xs3ZVAYRlh2mIesnJyIh66Dwnq7akoUgPhjW9G7xc/TBMbAzkO/eN4ZI511/nsnlSHZR9ZycN5uw==", "user"=>{"full_name"=>"Allan", "email"=>"allan.camargo@gmail.com", "location"=>"São Paulo, BR", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"Eu estou tentando criar um formulario de cadastro em Rails. Ta dando ruim."}, "commit"=>"Update User", "id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'allan.camargo@gmail.com' AND "users"."id" != 3) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-29 23:37:23 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/edit" for ::1 at 2016-03-29 23:37:27 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/edit.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial users/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Lukas/Documents/GitHub/colchonet/app/views"
+):
+    1: <h1>Editar Perfil</h1>
+    2: 
+    3: <%= render 'form' %>
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___579755370_57003828'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (105.6ms)
+
+
+Started GET "/users/3/edit" for ::1 at 2016-03-29 23:37:40 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/edit.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial users/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Lukas/Documents/GitHub/colchonet/app/views"
+):
+    1: <h1>Editar Perfil</h1>
+    2: 
+    3: <%= render 'form' %>
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___579755370_57003828'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.1ms)
+
+
+Started GET "/jobs/new" for ::1 at 2016-03-29 23:38:15 -0300
+
+ActionController::RoutingError (No route matches [GET] "/jobs/new"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (112.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (101.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-29 23:38:34 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-03-29 23:38:42 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial users/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "C:/Users/Lukas/Documents/GitHub/colchonet/app/views"
+):
+    1: <h1>Cadastro</h1>
+    2: 
+    3: <%= render 'form' %>
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__123825582_53836776'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.7ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.6ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (104.6ms)
+
+
+Started GET "/users/3/edit" for ::1 at 2016-03-29 23:39:36 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/_form.html.erb (5.0ms)
+  Rendered users/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/3" for ::1 at 2016-03-29 23:39:41 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qX85W+pRNAjrgtUFa5me5vIDcAbZVO/6puaWl24gfGGN6fHopM1suJREQ3wEfRxE9JO3o1KabxQuimMjDstX2Q==", "user"=>{"full_name"=>"Allan Camargo", "email"=>"allan.camargo@gmail.com", "location"=>"São Paulo, BR", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"Eu estou tentando criar um formulario de cadastro em Rails. Ta dando ruim."}, "commit"=>"Update User", "id"=>"3"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'allan.camargo@gmail.com' AND "users"."id" != 3) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/users/3" for ::1 at 2016-03-29 23:39:47 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4V3dbTF+oQ/n5X8aSuNyFoV/X4JYbm7R5+jVGxCMhozFyxXef+L5v5gj6WMlB/C0g++YJ9Og7j9vhCCvcGetNA==", "user"=>{"full_name"=>"Allan Camargo", "email"=>"allan.camargo@gmail.com", "location"=>"São Paulo, BR", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"Eu estou tentando criar um formulario de cadastro em Rails. Ta dando ruim."}, "commit"=>"Update User", "id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'allan.camargo@gmail.com' AND "users"."id" != 3) LIMIT 1
+  [1m[36mSQL (45.1ms)[0m  [1mUPDATE "users" SET "full_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["full_name", "Allan Camargo"], ["updated_at", "2016-03-30 02:39:47.167384"], ["id", 3]]
+  [1m[35m (6.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 61ms (ActiveRecord: 52.6ms)
+
+
+Started GET "/users/3" for ::1 at 2016-03-29 23:39:47 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-03-29 23:43:21 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:43:26 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TEEuUgvOgI6UroED5qg3Hr3YJTv7CxuewP8fiEm2W35o1+bhRVLYPutoF3qJTLW8u0jinnDFm3BIk+o8KV1wxg==", "user"=>{"full_name"=>"", "email"=>"lukas.", "location"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'lukas.' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 19ms (Views: 11.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2016-03-29 23:43:46 -0300
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (105.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-03-29 23:43:52 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (6.0ms)
+  Rendered users/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:43:58 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8NexUaDvJz2+udNaoEVwVdEndk1MoIFLtplwFgg7L0nRBG4A/gDiAt1BA6BBQgj2u1ruke11t6x77mbWp6Pm3A==", "user"=>{"full_name"=>"Lukas", "email"=>"", "location"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>""}, "commit"=>"Create User"}
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 17ms (Views: 10.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:47:25 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTRpSesiufzL9SCOBM0kWr0yJVh9tFBlnXRowmAzPRaBoqH6pb7hTLQztvdrKab4u6Li/fZ60IsVGJ12ANgWrg==", "user"=>{"full_name"=>"", "email"=>"lukas.", "location"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'lukas.' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/_form.html.erb (6.5ms)
+  Rendered users/new.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `full_nessages' for #<ActiveModel::Errors:0x6c8b0b0>):
+    3: 		<h2>Infelizmente não foi possível completar a ação
+    4: 		pois o formulário possui os seguintes erros:</h2>
+    5: 		<ul>
+    6: 			<% @user.errors.full_nessages.each do |message| %>
+    7: 			<li><%= message %></li>
+    8: 			<% end %>
+    9: 		</ul>
+  app/views/users/_form.html.erb:6:in `_app_views_users__form_html_erb___349000628_56637288'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__123825582_53836776'
+  app/controllers/users_controller.rb:13:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.5ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (106.9ms)
+
+
+Started POST "/users" for ::1 at 2016-03-29 23:47:37 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTRpSesiufzL9SCOBM0kWr0yJVh9tFBlnXRowmAzPRaBoqH6pb7hTLQztvdrKab4u6Li/fZ60IsVGJ12ANgWrg==", "user"=>{"full_name"=>"", "email"=>"lukas.", "location"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>""}, "commit"=>"Create User"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'lukas.' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/_form.html.erb (10.0ms)
+  Rendered users/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 27ms (Views: 19.0ms | ActiveRecord: 0.0ms)
